@@ -1,5 +1,5 @@
 VERSION 5.00
-Begin {C62A69F0-16DC-11CE-9E98-00AA00574A4F} UserForm1 
+Begin {C62A69F0-16DC-11CE-9E98-00AA00574A4F} UserForm1
    Caption         =   "巷道自动生成"
    ClientHeight    =   7305
    ClientLeft      =   45
@@ -466,7 +466,7 @@ ComboBox1.List = Array("单轨", "双轨")
 Dim dimStyle As AcadDimStyle
     Set dimStyle = ThisDrawing.DimStyles.Add("dimStyle1")
     ThisDrawing.ActiveDimStyle = dimStyle '激活该标注样式
-   
+
    With ThisDrawing
        '第一组定义全局和线性比例因子
          .SetVariable "DimScale", 1     '设置全局比例因子
@@ -553,6 +553,3 @@ Dim dimStyle As AcadDimStyle
     '标注样式的特性从图形已有样式中获得
    dimStyle.CopyFrom ThisDrawing
 End Sub
-
-
-
