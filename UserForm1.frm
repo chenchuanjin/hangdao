@@ -1,5 +1,5 @@
 VERSION 5.00
-Begin {C62A69F0-16DC-11CE-9E98-00AA00574A4F} UserForm1
+Begin {C62A69F0-16DC-11CE-9E98-00AA00574A4F} UserForm1 
    Caption         =   "巷道自动生成"
    ClientHeight    =   7305
    ClientLeft      =   45
@@ -453,6 +453,14 @@ End If
 
 End Sub
 
+Private Sub CommandButton2_Click()
+Unload Me
+End Sub
+
+Private Sub Label1_Click()
+
+End Sub
+
 Private Sub OptionButton1_Click()
 
 End Sub
@@ -466,7 +474,7 @@ ComboBox1.List = Array("单轨", "双轨")
 Dim dimStyle As AcadDimStyle
     Set dimStyle = ThisDrawing.DimStyles.Add("dimStyle1")
     ThisDrawing.ActiveDimStyle = dimStyle '激活该标注样式
-
+   
    With ThisDrawing
        '第一组定义全局和线性比例因子
          .SetVariable "DimScale", 1     '设置全局比例因子
@@ -551,5 +559,14 @@ Dim dimStyle As AcadDimStyle
         .SetVariable "DimAPost", ""     '为所有标注类型（角度标注除外）的换算标注测量值指定文字前缀或后缀（或两者都指定）
    End With
     '标注样式的特性从图形已有样式中获得
-   dimStyle.CopyFrom ThisDrawing
+    
+     dimStyle.CopyFrom ThisDrawing
+     
+    
+    
+    
 End Sub
+
+'文件自述：还差一部分内容
+
+
